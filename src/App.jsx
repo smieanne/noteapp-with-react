@@ -10,11 +10,13 @@ function App() {
   const [activeNote, setActiveNote] = useState(false);
 
 useEffect(() => {
+
     //ローカルストレージにノートを保存する
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
   useEffect(() => {
+
     //ローカルストレージにノートを保存する
     setActiveNote(notes[0].id);
   }, []);
@@ -41,6 +43,7 @@ useEffect(() => {
   };
 
   const onUpdateNote = (updatedNote) => {
+    
     //修正された新しいノートの配列を返す
     const updatedNotesArray = notes.map((note) => {
       if (note.id === updatedNote.id){
