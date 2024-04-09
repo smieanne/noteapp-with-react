@@ -2,7 +2,8 @@ import { useEffect, useId, useState } from 'react';
 import './App.css'
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
-import uuid from 'react-uuid';
+import { v4 as uuid } from "uuid";
+
 
 
 function App() {
